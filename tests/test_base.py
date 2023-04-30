@@ -1,5 +1,5 @@
-from project_name.base import NAME
+from sudoku_mailman.base import NAME
 
 
 def test_base():
-    assert NAME == "project_name"
+    assert NAME == "sudoku_mailman"

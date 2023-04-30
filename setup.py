@@ -1,4 +1,4 @@
-"""Python setup.py for project_name package"""
+"""Python setup.py for sudoku_mailman package"""
 import io
 import os
 from setuptools import find_packages, setup
@@ -6,7 +6,7 @@ from setuptools import find_packages, setup
 
 def read(*paths, **kwargs):
     """Read the contents of a text file safely.
-    >>> read("project_name", "VERSION")
+    >>> read("sudoku_mailman", "VERSION")
     '0.1.0'
     >>> read("README.md")
     ...
@@ -30,17 +30,17 @@ def read_requirements(path):
 
 
 setup(
-    name="project_name",
-    version=read("project_name", "VERSION"),
-    description="project_description",
-    url="https://github.com/author_name/project_urlname/",
+    name="sudoku_mailman",
+    version=read("sudoku_mailman", "VERSION"),
+    description="Awesome sudoku_mailman created by ahmed-ghaf-404",
+    url="https://github.com/ahmed-ghaf-404/Sudoku-Mailman/",
     long_description=read("README.md"),
     long_description_content_type="text/markdown",
-    author="author_name",
+    author="ahmed-ghaf-404",
     packages=find_packages(exclude=["tests", ".github"]),
     install_requires=read_requirements("requirements.txt"),
     entry_points={
-        "console_scripts": ["project_name = project_name.__main__:main"]
+        "console_scripts": ["sudoku_mailman = sudoku_mailman.__main__:main"]
     },
     extras_require={"test": read_requirements("requirements-test.txt")},
 )
