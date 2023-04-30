@@ -4,7 +4,7 @@ WORKDIR /
 
 RUN pip install --upgrade pip
 
-RUN apt-get update && apt-get install -y postgresql-server-dev-15
+RUN apt-get update && apt-get install -y postgresql-server-dev-14
 
 
 COPY requirements.txt requirements.txt
