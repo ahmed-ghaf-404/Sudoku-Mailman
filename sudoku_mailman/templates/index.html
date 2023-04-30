@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sudoku Mailing System</title>
+    <style>
+      /* Center the form horizontally */
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Sudoku Mailing System</h1>
+    <form method="POST">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required style="text-align:center;">
+      <br>
+      <input type="submit" formaction="/subscribe" value="Subscribe">
+      <input type="submit" formaction="/unsubscribe" name="unsubscribe" value="Unsubscribe">
+    </form>
+  </body>
+</html>
