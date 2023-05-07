@@ -4,7 +4,7 @@ WORKDIR /
 
 RUN pip install --upgrade pip
 
-RUN apt-get update && apt-get install -y postgresql-server-dev-all
+# RUN apt-get update && apt-get install -y postgresql-server-dev-all
 
 COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
