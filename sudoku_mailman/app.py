@@ -1,9 +1,8 @@
 from flask import Flask, render_template, request
-from engine import Session
-# from sudoku_mailman.Subscriber import Subscriber
-from Subscriber import Subscriber
-from flask_mail import Mail, Message
-from send_sudoku import send_sudoku
+from sudoku_mailman.engine import Session
+from sudoku_mailman.Subscriber import Subscriber
+# from flask_mail import Mail, Message
+from sudoku_mailman.send_sudoku import send_sudoku
 from apscheduler.schedulers.background import BackgroundScheduler
 import requests
 
