@@ -7,7 +7,7 @@ from apscheduler.schedulers.background import BackgroundScheduler
 import requests
 
 app = Flask(__name__)
-# app.debug = True
+app.debug = True
 
 @app.route('/')
 def index():
