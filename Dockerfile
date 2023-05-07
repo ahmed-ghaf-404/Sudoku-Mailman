@@ -1,6 +1,6 @@
 FROM python:3.9.6-slim-buster
 
-WORKDIR /sudoku_mailman
+WORKDIR /
 
 RUN pip install --upgrade pip
 RUN pip install gunicorn
@@ -12,4 +12,4 @@ RUN pip install -r requirements.txt
 
 COPY . .
 
-CMD gunicorn --bind 0.0.0.0:$PORT app:app
+CMD gunicorn --bind 0.0.0.0:$PORT sudoku_mailman.app:app
