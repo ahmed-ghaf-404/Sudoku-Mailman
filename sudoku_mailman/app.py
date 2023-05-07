@@ -8,7 +8,7 @@ from apscheduler.schedulers.background import BackgroundScheduler
 import requests
 
 app = Flask(__name__)
-app.debug = True
+# app.debug = True
 
 @app.route('/')
 def index():
@@ -54,4 +54,4 @@ scheduler.add_job(send_emails_job, 'cron', day_of_week='mon-sun', hour=2, minute
 scheduler.start()
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
