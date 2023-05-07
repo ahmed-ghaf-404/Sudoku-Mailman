@@ -16,13 +16,12 @@ def index():
 @app.route('/subscribe', methods=['POST'])
 def subscribe():
     email = request.form['email']
-    # with Session() as session:
-    #     if session.query(Subscriber).filter_by(email=email).first():
-    #         return render_template('index.html')
-    #     new_subscriber = Subscriber(email=email)
-    #     session.add(new_subscriber)
-    #     session.commit()
-    print(email)
+    with Session() as session:
+        if session.query(Subscriber).filter_by(email=email).first():
+            return render_template('index.html')
+        new_subscriber = Subscriber(email=email)
+        session.add(new_subscriber)
+        session.commit()
     return render_template('index.html')
 @app.route('/unsubscribe', methods=['POST'])
 def unsubscribe():
