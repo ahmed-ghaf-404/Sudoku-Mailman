@@ -11,7 +11,7 @@ app.register_blueprint(subscribe_bp)
 app.register_blueprint(unsubscribe_bp)
 app.register_blueprint(send_sample_bp)
 app.register_blueprint(notify_all_subscribers_bp)
-# app.run(debug=True)
+app.run(debug=True)
 # if __name__ == '__main__':
 #     app.register_blueprint(index_bp)
 #     app.register_blueprint(subscribe_bp)
