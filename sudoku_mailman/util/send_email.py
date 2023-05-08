@@ -3,7 +3,7 @@ import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from typing import List
-from observer import Subject
+from Subscriber import Subject
 
 class EmailSender(Subject):
     def __init__(self):

@@ -2,23 +2,29 @@
 <html>
   <head>
     <title>Sudoku Mailing System</title>
-    <style>
-      /* Center the form horizontally */
-      form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-    </style>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='indexStyles.css') }}">
   </head>
   <body>
-    <h1>Sudoku Mailing System</h1>
-    <form method="POST">
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required style="text-align:center;">
-      <br>
-      <input type="submit" formaction="/subscribe" value="Subscribe">
-      <input type="submit" formaction="/unsubscribe" name="unsubscribe" value="Unsubscribe">
-    </form>
+    <header>
+      <h1>Sudoku Mailing System</h1>
+    </header>
+    <main>
+      <form method="POST" class="mail-form">
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <button type="submit" formaction="/subscribe" class="btn btn-subscribe">Subscribe</button>
+          <button type="submit" formaction="/unsubscribe" name="unsubscribe" class="btn btn-unsubscribe">Unsubscribe</button>
+          <button type="submit" formaction="/send-sample" name="send-sample" class="btn btn-send-sample">Send sample</button>
+        </div>
+      </form>
+      <form method="POST" class="mail-form">
+        <div class="form-group">
+          <button type="submit" formaction="/notify_all" name="notify_all" class="btn btn-notify">Notify Subscribers</button>
+        </div>
+      </form>
+    </main>
   </body>
 </html>
