@@ -5,17 +5,15 @@ from sudoku_mailman.routes.unsubscribe import unsubscribe_bp
 from sudoku_mailman.routes.send_sample import send_sample_bp
 from sudoku_mailman.routes.notify_all_subscribers import notify_all_subscribers_bp 
 
-app = Flask(__name__, template_folder='sudoku_mailman/templates', static_folder='sudoku_mailman/static')
-app.register_blueprint(index_bp)
-app.register_blueprint(subscribe_bp)
-app.register_blueprint(unsubscribe_bp)
-app.register_blueprint(send_sample_bp)
-app.register_blueprint(notify_all_subscribers_bp)
-app.run(debug=True)
-# if __name__ == '__main__':
-#     app.register_blueprint(index_bp)
-#     app.register_blueprint(subscribe_bp)
-#     app.register_blueprint(unsubscribe_bp)
-#     app.register_blueprint(send_sample_bp)
-#     app.register_blueprint(notify_all_subscribers_bp)
-#     app.run(debug=True)
+
+def main():
+    app = Flask(__name__, template_folder='sudoku_mailman/templates', static_folder='sudoku_mailman/static')
+    app.register_blueprint(index_bp)
+    app.register_blueprint(subscribe_bp)
+    app.register_blueprint(unsubscribe_bp)
+    app.register_blueprint(send_sample_bp)
+    app.register_blueprint(notify_all_subscribers_bp)
+    app.run(debug=True)
+
+if '__main__'==__name__:
+    main()
