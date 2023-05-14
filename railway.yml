@@ -3,4 +3,4 @@ services:
     build:
       dockerfile: Dockerfile
     env:
-      PORT: 8080
+      PORT: 5000
