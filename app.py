@@ -14,3 +14,5 @@ app.register_blueprint(unsubscribe_bp)
 app.register_blueprint(send_sample_bp)
 app.register_blueprint(notify_all_subscribers_bp)
 app.run(debug=True, port=PORT, host=HOST)
+
+
