@@ -13,7 +13,8 @@ def main():
     app.register_blueprint(unsubscribe_bp)
     app.register_blueprint(send_sample_bp)
     app.register_blueprint(notify_all_subscribers_bp)
-    app.run(debug=True)
+    app.run(debug=False)
 
-if '__main__'==__name__:
+if __name__ == '__main__':
     main()
+
