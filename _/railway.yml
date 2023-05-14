@@ -1,6 +1,0 @@
-# services:
-#   web:
-#     build:
-#       dockerfile: Dockerfile
-#     env:
-#       PORT: 8080
