@@ -1,5 +1,25 @@
-FROM python:3.7-alpine
-COPY . /app
+# Base image
+FROM python:3.9
+
+# Set the working directory in the container
 WORKDIR /app
-RUN pip install .
-CMD ["sudoku_mailman"]
+
+# Copy the requirements.txt file to the container
+COPY requirements.txt .
+
+# Install the Python dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy the Flask application code to the container
+COPY . .
+
+# Expose the port on which the Flask app will run
+EXPOSE 5000
+
+# Set the environment variables
+ENV FLASK_APP=app.py
+ENV HOST=0.0.0.0
+ENV PORT=5000
+
+# Run the Flask application
+CMD ["flask", "run"]
