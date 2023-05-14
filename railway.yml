@@ -1,6 +1,0 @@
-services:
-  web:
-    build:
-      dockerfile: Containerfile
-    # env:
-    #   PORT: 8080
