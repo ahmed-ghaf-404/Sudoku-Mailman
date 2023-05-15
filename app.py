@@ -41,6 +41,7 @@ def subscribe():
 
 
 
+
 @app.route('/unsubscribe', methods=['POST'])
 def unsubscribe():
     email = request.form['email']
