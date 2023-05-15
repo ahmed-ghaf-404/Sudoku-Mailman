@@ -4,8 +4,7 @@ from sudoku_mailman.models.Subscriber import Subscriber
 from sudoku_mailman.routes.index import index
 from sudoku_mailman.engine import DBSession
 
-unsubscribe_bp = Blueprint('unsubscribe', __name__)
-@unsubscribe_bp.route('/unsubscribe', methods=['POST'])
+@app.route('/unsubscribe', methods=['POST'])
 def unsubscribe():
     email = request.form['email']
     with DBSession() as session:

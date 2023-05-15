@@ -6,8 +6,7 @@ from sudoku_mailman.routes.index import index
 from flask import Blueprint
 
 
-notify_all_subscribers_bp = Blueprint('notify_all_subscribers', __name__)
-@notify_all_subscribers_bp.route('/notify_all', methods=['POST'])
+@app.route('/notify_all', methods=['POST'])
 def notify_all_subscribers():
     with DBSession() as session:
         subscribers = session.query(Subscriber).all()
